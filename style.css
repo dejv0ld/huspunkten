@@ -84,7 +84,7 @@ html {
   width: 100%;
   position: fixed;
   align-items: center;
-  margin: auto;
+  margin: 0 auto;
   background-color: var(--four);
   /* Placing objects in order/layers */
   z-index: 999;
@@ -112,6 +112,7 @@ html {
 .navbar-links ul {
   display: flex;
   padding: 0;
+  margin-top: 3vh;
 }
 
 .navbar-links li {
@@ -124,4 +125,60 @@ html {
   color: var(--white);
   padding: 1rem;
   margin: 2vw;
+}
+
+.navbar-links li:hover {
+  font-weight: 900;
+  text-decoration: underline;
+}
+/* Only visible in responsive mode, handled by javascript */
+.toggle-button {
+  /* Toggle absolute means it will always be in position that to therfore we need to use the top, right, bottom, left rule */
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  /* Display none can be used everywhere and anytime but mostly when we want an element to be shown a vertain pixel width (responsive) */
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+}
+
+/* Creating the bar syle */
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 10%;
+}
+
+/* Make the navbar responsive */
+
+@media screen and (max-width: 400px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+  .toggle-button {
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar-links ul li {
+    text-align: center;
+  }
+  .navbar-links ul li a {
+    padding: .05rem 1rem;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
+
 }
