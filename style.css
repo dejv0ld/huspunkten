@@ -188,6 +188,7 @@ html {
   .navbar-links.active {
     display: flex;
   }
+
   .brand-title {
     margin-top: 2vw;
   }
@@ -204,9 +205,8 @@ html {
   background-size: cover;
   position: relative;
   background-image: linear-gradient(rgba(0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/huspunkten/img/hus1.jpg)
-  
-  
 }
+
 /* Centers hero text */
 .hero-text {
   text-align: center;
@@ -232,6 +232,7 @@ html {
     height: 140vh;
   }
 }
+
 /* Validated above 8/9-22 14:15 */
 
 /* 6. Testimonial Section/Grids */
@@ -248,10 +249,11 @@ html {
   margin-left: 10vw;
   margin-right: 10vw;
   margin-top: 10vh;
-  height: 140vh;
+  height: 120vh;
   /* Grid area */
-  grid-template-areas: "comment1 comment1 comment2 comment2" "comment3 comment3 comment4 comment4";
+  grid-template-areas: "comment1 comment1 comment2 comment2""comment3 comment3 comment4 comment4";
 }
+
 /*  */
 #comment1 {
   grid-area: comment1;
@@ -268,12 +270,12 @@ html {
   border-radius: 8px;
   text-align: center;
   align-items: center;
-  padding-top: 20px;
+  padding: 10px 20px 0 20px;
   color: var(--white);
 }
 
 #comment2 h2 {
-  margin-top: 20vh;
+  margin-top: 10vh;
 }
 
 #comment3 {
@@ -282,12 +284,12 @@ html {
   border-radius: 8px;
   text-align: center;
   align-items: center;
-  padding-top: 20px;
+  padding: 10px 20px 0 20px;
   color: var(--white);
 }
 
 #comment3 h2 {
-  margin-top: 20vh;
+  margin-top: 10vh;
 }
 
 
@@ -303,8 +305,28 @@ html {
 
 /* Making grid responsive for mobile devices */
 
-@media  screen and (max-width: 550px) {
+@media screen and (max-width: 550px) {
   .testimonial-grid-container {
-    
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr;
+    row-gap: 5vh;
+    grid-template-areas: "comment1"
+      "comment2"
+      "comment4"
+      "comment3"
+
+
   }
+
+  #comment1,
+  #comment2,
+  #comment3,
+  #comment4 {
+    height: 70vh;
+    padding: 0 10px 0 10px
+  }
+}
+
+.btn2 {
+  margin-top: 2.5vh;
 }
