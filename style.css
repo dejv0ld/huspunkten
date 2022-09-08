@@ -7,7 +7,7 @@
 3. Buttons
 4. Navbar
 5. Hero Section
-6.
+6. Grids
 7.
 */
 
@@ -230,5 +230,81 @@ html {
 @media only screen and (max-width: 550px) {
   .hero-image {
     height: 140vh;
+  }
+}
+/* Validated above 8/9-22 14:15 */
+
+/* 6. Testimonial Section/Grids */
+
+.testimonial-grid-container {
+  /* Decide that this is a grid */
+  display: grid;
+  /* grid-template-columns */
+  grid-template-columns: (4, 1fr);
+  /* grid-template-rows */
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  row-gap: 10vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-top: 10vh;
+  height: 140vh;
+  /* Grid area */
+  grid-template-areas: "comment1 comment1 comment2 comment2" "comment3 comment3 comment4 comment4";
+}
+/*  */
+#comment1 {
+  grid-area: comment1;
+  border-radius: 8px;
+  background-image: url(/huspunkten/img/family.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#comment2 {
+  grid-area: comment2;
+  background-color: var(--two);
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+  padding-top: 20px;
+  color: var(--white);
+}
+
+#comment2 h2 {
+  margin-top: 20vh;
+}
+
+#comment3 {
+  grid-area: comment3;
+  background-color: var(--two);
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+  padding-top: 20px;
+  color: var(--white);
+}
+
+#comment3 h2 {
+  margin-top: 20vh;
+}
+
+
+#comment4 {
+  grid-area: comment4;
+  background-image: url(/huspunkten/img/office-820390_1920.jpg);
+  border-radius: 8px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+/* Making grid responsive for mobile devices */
+
+@media  screen and (max-width: 550px) {
+  .testimonial-grid-container {
+    
   }
 }
