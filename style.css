@@ -8,7 +8,7 @@
 4. Navbar
 5. Hero Section
 6. Grids
-7.
+7. Slideshow
 */
 
 /* 1. Root settings */
@@ -300,6 +300,7 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+ 
 
 }
 
@@ -329,4 +330,61 @@ html {
 
 .btn2 {
   margin-top: 2.5vh;
+}
+
+/* 7. Slideshow*/
+
+.slideshow-container {
+  width: 80%;
+  position: relative;
+
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 5vh;
+  background-color: var(--white);
+  height: 90vh;
+  border-radius: 10px;
+
+}
+
+.slideshow-container img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+  padding: 50px 50px
+ 
+
+}
+
+/* Hiding the slides, and then showing item by JS code */
+
+.mySlides {
+  display: none;
+}
+
+/* The title inside slider */
+.mySlides-header {
+  font-size: 2rem;
+}
+
+/* Adjusting both the title and the text inside slider*/
+.mySlides-header, h1, p {
+  text-align: center;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4
+  }
+  to {
+    opacity: 1
+  }
 }
