@@ -131,6 +131,7 @@ html {
   font-weight: 900;
   text-decoration: underline;
 }
+
 /* Only visible in responsive mode, handled by javascript */
 .toggle-button {
   /* Toggle absolute means it will always be in position that to therfore we need to use the top, right, bottom, left rule */
@@ -142,6 +143,7 @@ html {
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
+  height: 21px;
 }
 
 /* Creating the bar syle */
@@ -160,25 +162,36 @@ html {
     align-items: flex-start;
 
   }
+
   .toggle-button {
     display: flex;
   }
+
   .navbar-links {
     display: none;
     width: 100%;
   }
+
   .navbar-links ul {
     width: 100%;
     flex-direction: column;
   }
+
   .navbar-links ul li {
     text-align: center;
   }
+
   .navbar-links ul li a {
     padding: .05rem 1rem;
   }
+
   .navbar-links.active {
     display: flex;
   }
+  .brand-title {
+    margin-top: 2vw;
+  }
 
 }
+
+/* Valdited above 8/9-22 13:08 */
